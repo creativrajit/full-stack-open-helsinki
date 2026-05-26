@@ -28,7 +28,7 @@ sequenceDiagram
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser: application/json
+    server-->>browser: application/json, format: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
     deactivate server
 
     Note right of browser: The browser runs the event handler function that renders the notes
